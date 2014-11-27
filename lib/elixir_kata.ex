@@ -1,5 +1,4 @@
 defmodule Romans do
-
     def fromArabic(num) do
         cond do
             num < 0 ->
@@ -31,7 +30,7 @@ defmodule Romans do
             num >= 5 ->
                 "V" <> fromArabic(num-5)
             num >= 4 ->
-                fromArabic(1) <> fromArabic(5)
+                "IV" <> fromArabic(num-4)
             num >= 1 ->
                 "I" <> fromArabic(num-1)
         end
