@@ -2,22 +2,28 @@ defmodule Romans.Mixfile do
   use Mix.Project
 
   def project do
-    [ app: :romans,
-      version: "0.0.1",
-      elixir: "~> 0.12.5",
-      deps: deps ]
+    [app: :elixir_kata,
+     version: "0.0.1",
+     elixir: "~> 1.0",
+     deps: deps]
   end
 
   # Configuration for the OTP application
+  #
+  # Type `mix help compile.app` for more information
   def application do
-    [mod: { Romans, [] }]
+    [applications: [:logger]]
   end
 
-  # Returns the list of dependencies in the format:
-  # { :foobar, git: "https://github.com/elixir-lang/foobar.git", tag: "0.1" }
+  # Dependencies can be Hex packages:
   #
-  # To specify particular versions, regardless of the tag, do:
-  # { :barbat, "~> 0.1", github: "elixir-lang/barbat" }
+  #   {:mydep, "~> 0.3.0"}
+  #
+  # Or git/path repositories:
+  #
+  #   {:mydep, git: "https://github.com/elixir-lang/mydep.git", tag: "0.1.0"}
+  #
+  # Type `mix help deps` for more examples and options
   defp deps do
     []
   end
